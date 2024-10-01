@@ -1,4 +1,6 @@
-# Diffusion-based Image-to-Image Translation by Noise Correction via Prompt Interpolation (ECCV 2024 Poster)
+# Diffusion-based Image-to-Image Translation by Noise Correction via Prompt Interpolation (ECCV 2024 Poster) 
+
+*Sorry for working in progress! We should add some details for our code.
 
 This is the official code of the paper "Diffusion-based Image-to-Image Translation by Noise Correction via Prompt Interpolation" in ECCV 2024. 
 
@@ -31,7 +33,15 @@ pip install -r requirements.txt
 sh inference_single.sh 
 ```
 
-
+## Citation 
+```
+@article{lee2024diffusion,
+  title={Diffusion-Based Image-to-Image Translation by Noise Correction via Prompt Interpolation},
+  author={Lee, Junsung and Kang, Minsoo and Han, Bohyung},
+  journal={arXiv preprint arXiv:2409.08077},
+  year={2024}
+}
+```
 ## License
 
 This project is licensed under the MIT License.
