@@ -16,7 +16,6 @@ This is the official code of the paper "Diffusion-based Image-to-Image Translati
 
 ### Installing
 
-
 ```
 git clone https://github.com/JS-Lee525/PIC.git
 ```
@@ -26,12 +25,43 @@ conda create -n [your_env] python=3.9
 pip install -r requirements.txt
 ```
 
+### Structures
+
+    .
+    ├── assets    
+          ├── thumbnail.png      
+    ├── sample_data
+          ├── cat
+                ├── cat_1.png
+          ├── dog
+                ├── dog_1.png
+          ├── horse
+                ├── horse_1.png
+          ├── tree
+                ├── tree_1.png
+          ├── zebra
+                ├── zebra_1.png
+    ├── src
+          ├── ...         
+    ├── inference_single.sh  # Command File for editing images         
+    ├── requirements.txt                   
+    ├── LICENSE
+    └── readme.md
 
 ### Execution
 
 ```
 sh inference_single.sh 
 ```
+
+You can follow the details of this sh file.
+- device_num: your GPU number
+- num_ddim_steps: diffusion steps for the inference (default = 50)
+- tau: steps of editing images in reverse process (default = 25)
+- beta: hyperparameter used in initalization of prompt interpolation (default = 0.3 for word swap / 0.8 for adding phrases)
+- gamma: hyperparameter of controlling the corretion term (default = 0.2, gamma * negative_guidance_scale is used in the code.)
+- task: translation tasks in the format of "{source phrase}2{target phrase}". For example, if the task is set to 'cat2dog' and source prompt is created as 'a cat is lying on the grass', the target prompt will be set 'a dog is lying on the grass'. Note that the source phrase should be included in the source prompt. You can check the source prompt when you execute this command.
+
 
 ## Citation 
 ```
